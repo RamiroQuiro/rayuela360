@@ -1,15 +1,23 @@
 ---
-
+import { Image } from "astro:assets";
+const { title, contenido, src ,deg} = Astro.props;
 ---
 
-<article class="bg-white w-[350px] border h-[400px] rounded p-5 flex flex-col items-center justify-normal">
-<div class="h-1/4">
-    <img
-    src="https://picsum.photos/id/40/600/300"
-    />
-</div>
-<div class="flex flex-col h-full flex-grow w-full">
-    <h2>Card Title</h2>
-    <p>lorem*5</p>
-</div>
+<article
+
+style={{
+ transform: `rotate(${deg}deg)`
+}}
+class={` bg-white w-[350px] border min-h-[400px] rounded p-5 flex flex-col items-center justify-normal shadow-md hover:bg-white/80 cursor-pointer  duration-300 hover:backdrop-blur-sm group`}
+>
+    
+<div class=" flex-grow">
+        <Image alt={title} src={src} width="300" height="200" } class="rounded" />
+    </div>
+    <div class="flex flex-col h-full flex-grow w-full my-2 ">
+        <h2 class="text-3xl font-bold my-2">{title}</h2>
+        <p>
+            {contenido}
+        </p>
+    </div>
 </article>

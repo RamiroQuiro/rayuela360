@@ -1,18 +1,44 @@
 ---
 import Card from "./CardServicios/CardsServicios.astro";
+
+
 ---
 
 
-<section class="h-screen  mx-auto container flex flex-col items-center justify-center z-20">
+<section class="min-h-screen  mx-auto container flex flex-col items-center justify-center py-32">
     <div class="w-full flex items-center justify-start border-b py-2">
 
     
-    <h1 class=" text-2xl font-bold">Servicios que ofrecemos
+    <h1 class=" text-5xl font-bold">Servicios que ofrecemos
 </h1>
 
 </div>
-<div class="flex w-full items-center justify-evenly">
-        
-    <Card/>
+<div class="flex w-full items-stretch justify-evenly py-32 relative">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-full h-20 absolute top-16 left-0 rotate-180 stroke-primary-100">
+        <path
+          d="M-1000 100 C 0 10, 10 0, 1000 50"
+          stroke=""
+          fill="transparent"
+          stroke-width="2"
+        />
+      </svg>
+    <Card
+    src="https://picsum.photos/id/40/600/300"
+    title="Cabina de Fotos"
+    contenido="Cabina Fotograca, diseñada para espacios reducidos, y acorde eventos de alta categoria, impresiones de primera calidad, camara de 48mpx"
+    deg="5"
+    />
+    <Card
+    src="https://cdn0.bodas.net/article-real-wedding/578/3_2/1280/jpg/4337216.webp"
+    title="Plataforma 360!"
+    contenido="Se trata de una moda que ha llegado para quedarse y que ha tenido su gran boom a partir de algunos eventos de influencers. Hablamos del video booth 360 para bodas, una plataforma giratoria que proporciona imágenes en movimiento y con efectos."
+    deg="-8"
+    />
+    <Card
+    src="https://tienda.fotografiamardelplata.com.ar/wp-content/webpc-passthru.php?src=https://tienda.fotografiamardelplata.com.ar/wp-content/uploads/2022/10/Photobooth-3-1080.jpg"
+    title="Props"
+    contenido="EL COMPLEMENTO INFALTABLE para tus fiestas, impresiones de alta clidad y personabilidazables"
+    deg="8"
+    />
 </div>
 </section>
