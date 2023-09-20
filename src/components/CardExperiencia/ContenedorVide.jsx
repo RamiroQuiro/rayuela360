@@ -18,7 +18,7 @@ export default function ContenedorVide({ videoSrc,idVideo }) {
             onMouseOver={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             className="flex items-center justify-between w-full h-full   relative   ">
-            <video  id={idVideo} ref={refVideo} h- className=" object-cover h-full  w-full rounded  " loop muted >
+            <video  id={idVideo} ref={refVideo}  className=" object-cover h-full  w-full rounded  " loop muted >
                 <source  src={videoSrc} type='video/mp4' />
             </video>
         </div>
