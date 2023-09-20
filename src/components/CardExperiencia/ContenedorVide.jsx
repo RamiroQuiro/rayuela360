@@ -1,29 +1,30 @@
 import React, { useRef } from 'react'
 
-export default function ContenedorVide({videoSrc}) {
+export default function ContenedorVide({ videoSrc,idVideo }) {
 
-const refVideo=useRef(null)
+    const refVideo = useRef(null)
 
-const handleMouseEnter = () => {
-    console.log('first')
-    if (refVideo.current) {
-      refVideo.current.play();
-    }
-  };
+    const handleMouseEnter = () => {
+        if (refVideo.current) {
+            refVideo.current.play();
+        }
+    };
 
-  const handleMouseLeave = () => {
-    if (refVideo.current) {
-      refVideo.current.pause();
-    }
-  };
+    const handleMouseLeave = () => {
+        if (refVideo.current) {
+            refVideo.current.pause();
+        }
+    };
 
 
-  return (
-    <div ref={refVideo}
-    onMouseOver={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    class="flex items-center justify-between w-full h-auto  relative gap-3 ">
-             <video src={videoSrc} class=" object-cover w-full h-60" controls></video>
+    return (
+        <div 
+            onMouseOver={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className="flex items-center justify-between w-full h-full   relative   ">
+            <video  id={idVideo} ref={refVideo} h- className=" object-cover h-full  w-full   " loop muted >
+                <source  src={videoSrc} type='video/mp4' />
+            </video>
         </div>
-  )
+    )
 }

@@ -1,17 +1,19 @@
 ---
 import CardExperiencia from "../components/CardExperiencia/CardExperiencia.astro";
 import camSVG from "../../public/cam.svg"
-import fotos from "../../public/fotos.mp4"
+import fotos from "/fotos.mp4"
 ---
 
-<section id="seccionExperiencia" class="min-h-screen mx-auto bg-white   flex flex-col items-center justify-center py-32  b backdrop-blur-sm w-full ">
+<section id="seccionExperiencia" class=" mx-auto bg-white   flex flex-col items-center justify-center py-32  b backdrop-blur-sm w-full ">
     <div class="w-full flex items-center justify-start border-b py-2">
         <h1 class="text-5xl font-bold pl-10">La Mejor Experiencia Para Tu Evento</h1>
     </div> 
-    <div class="flex w-full flex-col items-stretch justify-evenly py-32 relative gap-10 px-20">
+    <div class="flex w-full flex-col items-stretch justify-evenly py-32 relative gap-10 px-20 h-[110vh]">
 
-        <CardExperiencia color='#183244' svg={camSVG} videoSrc={fotos}/>
-        <CardExperiencia color="#ffc1c1"/>
-        <CardExperiencia color="#c18A28"/>
+        <CardExperiencia color='#1832ff80' svg={camSVG} videoSrc={fotos} idContenedorVideo="contenedor1" idVideo="videoFotos"
+        parrafo="No perderas un detalle. Imagenes capturadas con Camaras Full HD de ultima generacion"
+        />
+        <CardExperiencia color="#ffc1c180"/>
+        <CardExperiencia color="#c18A2880"/>
     </div>
 </section>
