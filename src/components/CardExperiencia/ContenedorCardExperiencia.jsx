@@ -12,7 +12,7 @@ const Card = ({ children, color,idContenedorVideo,idVideo }) => {
     document.body.style.backgroundColor = color
     cardExperience.style.backgroundColor = "transparent"
     contenedorVideo.style.width='100%'
-    contenedorVideo.style.borderRadius='0'
+    contenedorVideo.style.borderRadius='4px 4px 4px 4px'
     contenedorVideo.style.height='auto'
   }
   
