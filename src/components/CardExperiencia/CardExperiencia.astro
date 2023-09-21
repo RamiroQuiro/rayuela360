@@ -6,7 +6,7 @@ const { color,svg,videoSrc ,idContenedorVideo,idVideo,parrafo} = Astro.props;
 ---
 
 <ContenedorCardExperiencia client:load color={color} idContenedorVideo={idContenedorVideo} idVideo={idVideo}>
-    <div class="group-hover: duration-500 ">
+    <div class="group-hover:scale-100 scale-50 duration-500 ">
         <img alt="SVG" class="h-40" src={svg?.src} width={svg?.width} height={svg?.height} />
         
     </div>
@@ -14,7 +14,7 @@ const { color,svg,videoSrc ,idContenedorVideo,idVideo,parrafo} = Astro.props;
         <p class="text group-hover:text-lg font-bold tracking-wide my-2">{parrafo}</p>
     </div>
     <div id={idContenedorVideo} class="flex flex-col items-start justify-between w-1/2 group-hover:flex-grow-[10] gap-5  rounded-bl-full  relative duration-500
-     overflow-hidden  h-full translate-x-1/2 -translate-y-5 group-hover:translate-x-0  group-hover:translate-y-0">
+     overflow-hidden  h-full translate-x-1/2  group-hover:translate-x-0  group-hover:translate-y-0">
           <!-- <div class=" z-10 bg-gradient-to-b from-white via-white/30 to-transparent backdrop-blur-sm absolute -top-10 lef-0 w-full h-20"></div> -->
           <ContenedorVide client:load videoSrc={videoSrc} idVideo={idVideo}/>
           <!-- <div class=" z-10 bg-gradient-to-t from-white via-white/30 to-transparent backdrop-blur-sm absolute -bottom-10 lef-0 w-full h-20"></div> -->
