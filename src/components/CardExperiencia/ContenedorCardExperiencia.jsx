@@ -30,7 +30,6 @@ const Card = ({ children, color,idContenedorVideo,idVideo }) => {
     
   }
 
-
   return (
     <article
       className=" border-primary-100 overflow-hidden duration-300 gap-x-10  border flex items-center justify-between w-full rounded hover:flex-grow-[10] flex-1 relative  group  cursor-pointer hover:bg-white hover:shadow-xl  hover:shadow-primary-100-400/20 "
