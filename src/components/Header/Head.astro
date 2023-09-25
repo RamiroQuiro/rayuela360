@@ -1,8 +1,9 @@
 ---
-
+import Nav from "../CardExperiencia/Nav.astro";
 ---
 
 <header
+id="inicio"
     class="bg-red-300 w-screen h-screen flex flex-col items-center justify-center relative "
 >
     <div class="w-screen absolute top-0 left-0 h-screen ">
@@ -13,18 +14,7 @@
             class="w-full h-full object-cover object-center"
         />
     </div>
-    <nav
-        class="fixed top-0 left-0 w-full bg-gradient-to-b z-40 from-black/80 text-white font-medium to-transparent h-16 flex items-center justify-between"
-    >
-        <div class="w-1/2 flex items-center justify-center">logo</div>
-
-        <ul class="flex flex-grow items-center justify-evenly ">
-            <li>Inicio</li>
-            <li>Servicio</li>
-            <li>Imagenes</li>
-            <li>Contacto</li>
-        </ul>
-    </nav>
+    <Nav/>
     <div
         class="rounded shadow-sm mx-center text-white z-30 p-10 w-full flex flex-col items-start justify-between text-left "
     >
