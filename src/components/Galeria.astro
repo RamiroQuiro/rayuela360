@@ -44,12 +44,12 @@ const arrayGaleria=[
 ---
 
 <section
-    class="min-h-screen mx-auto w-screen  flex flex-col items-center justify-center py-32 "
+    class="min-h-screen  w-screen   flex flex-col items-center justify-center py-32 "
 >
     <div class="w-10/12 flex items-center justify-start border-b py-2">
-        <h1 class="text-5xl font-bold">Galeria</h1>
+        <h1 class="text-3xl font-bold">Galeria</h1>
     </div>
-        <div class=" my-10 w-10/12 mx-auto h-full flex flex-wrap items-center justify-between gap-5">
+        <div class=" my-10 md:w-10/12 mx-auto h-full flex flex-wrap md:flex-row flex-col items-center justify-between md:gap-5">
         {
         arrayGaleria?.map((element)=>(
             <CardImage

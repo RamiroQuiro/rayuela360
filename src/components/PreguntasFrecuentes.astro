@@ -1,0 +1,74 @@
+---
+
+
+const preguntas = [
+    {
+        pregunta: "¿Cuánto tiempo se tarda en montar la cabina fotográfica?",
+        respuesta: "Aproximadamente 30 minutos."
+    },
+    {
+        pregunta: "¿Cuántas personas pueden caber en la cabina fotográfica a la vez?",
+        respuesta: "Hasta 6 personas pueden caber cómodamente."
+    },
+    {
+        pregunta: "¿Se pueden personalizar los fondos de las fotos?",
+        respuesta: "Sí, ofrecemos una variedad de fondos personalizables."
+    },
+    {
+        pregunta: "¿Cuánto tiempo se tarda en imprimir las fotos?",
+        respuesta: "Las fotos se imprimen en menos de un minuto."
+    },
+    {
+        pregunta: "¿Qué es la plataforma 360?",
+        respuesta: "La plataforma 360 es un servicio de fotografía de 360 grados."
+    },
+    {
+        pregunta: "¿Cuánto tiempo se tarda en montar la plataforma 360?",
+        respuesta: "La plataforma 360 se puede montar en aproximadamente 45 minutos."
+    },
+    {
+        pregunta: "¿Cuántas personas pueden estar en la plataforma 360 a la vez?",
+        respuesta: "La plataforma 360 puede acomodar a una persona a la vez para obtener la mejor calidad de imagen."
+    },
+    {
+        pregunta: "¿Se pueden personalizar los vídeos de la plataforma 360?",
+        respuesta: "Sí, ofrecemos opciones de personalización para los vídeos de la plataforma 360."
+    },
+    {
+        pregunta: "¿Cuánto dura un vídeo de la plataforma 360?",
+        respuesta: "Un vídeo típico de la plataforma 360 dura entre 15 y 60 segundos."
+    },
+    {
+        pregunta: "¿Cómo se entregan las fotos y vídeos a los clientes?",
+        respuesta: "Las fotos y vídeos se pueden entregar digitalmente a través de correo electrónico o en un dispositivo USB proporcionado por el cliente."
+    }
+];
+
+---
+
+
+<section
+    id="ofrecemos"
+    class="mx-auto bg-white flex flex-col items-center justify-center py-16 b backdrop-blur-sm w-full"
+>
+    <div class="w-10/12 flex items-center justify-start border-b py-2">
+        <h1 class="text-3xl font-bold">Preguntas Frecuentes</h1>
+    </div>
+    <div class=" my-10 md:w-10/12 mx-auto h-full flex flex-wrap md:flex-row flex-col items-center justify-between md:gap-5">
+{
+    preguntas?.map((el)=>(
+        <div class="flex flex-col w-[45%] items-start justify-normal border-b py-3 ">
+            <div class="flex items-center justify-normal "><img
+            src="/check.svg"
+            alt="check"
+            width={50}
+            height={50}/>
+            <h3 class="font-medium">{el.pregunta}</h3></div>
+            <p class="text-sm">{el.respuesta}</p>
+        </div>
+        
+    ))
+}
+
+    </div>
+</section>
