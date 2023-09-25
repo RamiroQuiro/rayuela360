@@ -1,0 +1,63 @@
+---
+import CardImage from "./CardExperiencia/CardImage.astro";
+
+const arrayGaleria=[
+    {
+        img:"https://images.pexels.com/photos/787961/pexels-photo-787961.jpeg",
+        title:"foto1",
+        description:"Cumple de 15, Anita"
+},
+    {
+        img:"https://images.pexels.com/photos/2240763/pexels-photo-2240763.jpeg",
+        title:"foto1",
+        description:"Nodo Evento Gamer"
+},
+    {
+        img:"https://images.pexels.com/photos/6299265/pexels-photo-6299265.jpeg",
+        title:"foto1",
+        description:"Cumpleaños Infantil"
+},
+    {
+        img:"https://images.pexels.com/photos/2399097/pexels-photo-2399097.jpeg",
+        title:"foto1",
+        description:"Cumple de 8 años creo meeen"
+},
+    {
+        img:"https://images.pexels.com/photos/17821247/pexels-photo-17821247/free-photo-of-moda-hombre-gente-festival.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1g",
+        title:"foto1",
+        description:"Casamiento de tony"
+},
+    {
+        img:"https://images.pexels.com/photos/787961/pexels-photo-787961.jpeg",
+        title:"foto1",
+        description:"Cumple de 15, Anita"
+},
+    {
+        img:"https://images.pexels.com/photos/787961/pexels-photo-787961.jpeg",
+        title:"foto1",
+        description:"Cumple de 15, Anita"
+},
+
+]
+
+
+---
+
+<section
+    class="min-h-screen mx-auto w-screen  flex flex-col items-center justify-center py-32 "
+>
+    <div class="w-10/12 flex items-center justify-start border-b py-2">
+        <h1 class="text-5xl font-bold">Galeria</h1>
+    </div>
+        <div class=" my-10 w-10/12 mx-auto h-full flex flex-wrap items-center justify-between gap-5">
+        {
+        arrayGaleria?.map((element)=>(
+            <CardImage
+            img={element.img}
+            title={element.title}
+            description={element.description}
+            />
+        ))
+        }
+    </div>
+</section>
