@@ -14,7 +14,7 @@ import celular from "/celularSistema.mp4"
     </div> 
     <div class="flex w-full flex-col items-stretch justify-evenly py-32 relative gap-10 md:px-20 h-[110vh]">
 
-        <CardExperiencia color='#FFAC6380' svg={fotoCabin} videoSrc={fotos} idContenedorVideo="contenedor1" idVideo="videoFotos"
+        <CardExperiencia  color='#FFAC6380' svg={fotoCabin} videoSrc={fotos} idContenedorVideo="contenedor1" idVideo="videoFotos"
         parrafo="No perderas un detalle. Imagenes capturadas con Camaras Full HD de ultima generacion"
         />
         <CardExperiencia color='#77B1FF50' svg={sistema} videoSrc={celular} idContenedorVideo="contenedor2" idVideo="celularSistema"
@@ -25,3 +25,28 @@ import celular from "/celularSistema.mp4"
         />
     </div>
 </section>
+
+<script>
+    
+    
+    const observador = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                console.log(entry);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("bg-red-500");
+                } else {
+                    entry.target.classList.remove("bg-red-500");
+                }
+            });
+        },
+        {
+            threshold: 0.5,
+        },
+    );
+
+    const imgen = document.querySelectorAll("#cardPolaroid");
+
+    observador.observe(imgen);
+
+</script>

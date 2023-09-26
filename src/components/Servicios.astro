@@ -3,13 +3,15 @@ import Card from "./CardServicios/CardsServicios.astro";
 ---
 
 <section
-id="servicios"
-    class="min-h-screen mx-auto w-screen  flex flex-col items-center justify-center py-32 "
+    id="servicios"
+    class="servicios min-h-screen mx-auto w-screen flex flex-col items-center justify-center py-32"
 >
     <div class="w-10/12 flex items-center justify-start border-b py-2">
         <h1 class="text-5xl font-bold">Servicios que ofrecemos</h1>
     </div>
-    <div class="flex md:flex-row flex-col w-full px-3 md:px-0 items-stretch justify-evenly py-32 relative md:-rotate-6">
+    <div
+        class="flex md:flex-row flex-col w-full px-3 md:px-0 items-stretch justify-evenly py-32 relative md:-rotate-6"
+    >
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 100 100"
@@ -42,8 +44,39 @@ id="servicios"
     </div>
 </section>
 
+<style>
+    .polaroidEntry {
+        background-color: red;
+    }
+</style>
 
 <script>
-    const tarjetas=document.querySelectorAll('fotosPolaroid')
-    console.log(tarjetas)
+    import gsap from "gsap";
+    const card = document.querySelectorAll("#cardPolaroid");
+
+    const observer = new IntersectionObserver(
+        (entries, i) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    gsap.to(card, {
+                        opacity:1,
+                        duration: 1,
+                        scale: 1,
+                        y: 40,
+                        stagger: {
+                            grid: [7, 15],
+                            from:"random",
+                            ease: "power3.inOut",
+                            amount: 4,
+                        },
+                    });
+                }
+            });
+        },
+        {
+            threshold: 0.5,
+        },
+    );
+
+    card.forEach((element, i) => observer.observe(element, i));
 </script>

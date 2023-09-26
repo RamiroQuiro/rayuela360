@@ -4,6 +4,10 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import { ViewTransitions } from "astro:transitions";
+
+
 ---
 
 <!doctype html>
@@ -13,8 +17,9 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={"Servicios de cabina de fotos y plataforma 360"} />
+		<meta name="gene rator" content={"Servicios de cabina de fotos y plataforma 360"} />
 		<title>{title}</title>
+		<ViewTransitions/>
 	</head>
 	<body id="body" class="  w-screen duration-300 flex flex-col items-center justify-normal transition-colors overflow-x-hidden bg-primary-fondo text-primary-text">
 		<slot />
